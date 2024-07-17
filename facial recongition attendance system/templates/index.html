@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+    <title>FACE_RECOGNITION</title>
+    <style>
+      .body {
+        background-image: url("{{ url_for('static', filename='tt.jpg') }}") ;
+        /* background-image: linear-gradient(161deg, #f20909 0%, #2006e6 100%); */
+        
+        
+        margin-left: 0;
+      }
+      .hname {
+        color: white;
+        font-family: Gloock , monospace;
+        font-weight: 400;
+        
+        
+        
+      }
+      .video {
+        margin-top: 20px;
+        border-radius: 25px;
+        margin-left: 22%;
+      }
+      .attendence {
+        margin-top: 25px;
+        margin-left: 40%;
+      }
+      .btn{
+        width:10rem;
+        height: 2.5rem;
+        border-radius: 3rem;
+        background-color: rgb(93, 245, 194);
+    
+
+      }
+      .btn a{
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+  </head>
+  <body class="body">
+    <div class="container">
+      <div class="vid">
+        <h1 class="hname">
+        Face Recognition Attendance System
+        </h1>
+        <img class="video" src="{{ url_for('video_feed') }}" />
+        <div class="attendence">
+          <button class="btn">
+            <a  href="{{ url_for('download_attendance') }}"
+              >Download Attendance</a
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
